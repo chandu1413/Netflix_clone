@@ -1,4 +1,3 @@
-import React from 'react'
 import "./Content.css"
 
 const Content = () => {
@@ -10,3 +9,7 @@ const Content = () => {
 }
 
 export default Content
+
+
+
+// 1172e690907c5b35a966c432f3606507

@@ -10,7 +10,7 @@ const Header = () => {
         <div className='header_content'> 
             <div className='header_billbord'>
                 
-                <img alt="The Walking Dead" class="title-logo" src="https://occ-0-3215-3663.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABXpN1WnlyrB7DtPoEDtUidJqTrpkcdmNHlNchIRZs8tdBPTRYkf4_qM95uZyLwxccpYZsYthnkSrOGRVvYshlK7QuJoy2EwiwiWZOaj8k1Q-.webp?r=f1a" title="The Walking Dead"></img>
+                <img alt="The Walking Dead" className="title-logo" src="https://occ-0-3215-3663.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABXpN1WnlyrB7DtPoEDtUidJqTrpkcdmNHlNchIRZs8tdBPTRYkf4_qM95uZyLwxccpYZsYthnkSrOGRVvYshlK7QuJoy2EwiwiWZOaj8k1Q-.webp?r=f1a" title="The Walking Dead"></img>
             </div>
             <h4 className='header_desc'>
             In the wake of a zombie apocalypse, survivors hold on to the hope of humanity by banding together to wage a fight for their own survival.  
