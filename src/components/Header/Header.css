@@ -1,9 +1,9 @@
 header{
-    height: 100vh;
-    background-image:url(https://occ-0-3215-3663.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABdjWn_2RkEh-ild1mKTXRY9oH-aEe3H_ejCoXLv9yH5VvUx5XymWbeVOD0B-nvip7rK7AaBHVgKeafFfyUt7Gs37vAjbaztUttJC.webp?r=10a) ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+     height: 100vh;
+    /* background-image:url(https://occ-0-3215-3663.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABdjWn_2RkEh-ild1mKTXRY9oH-aEe3H_ejCoXLv9yH5VvUx5XymWbeVOD0B-nvip7rK7AaBHVgKeafFfyUt7Gs37vAjbaztUttJC.webp?r=10a) ; */
+     background-repeat: no-repeat; 
+    /* background-size: cover;
+     background-position: center;   */
 }
 .header_inner_shadow{
     position: absolute;
@@ -17,6 +17,9 @@ header{
 .header_content{
     margin-left: 5vw ;
     padding-top: 15vw;
+}
+.banner_title{
+    color: white;
 }
 header img{
     

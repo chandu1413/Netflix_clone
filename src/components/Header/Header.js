@@ -1,19 +1,53 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Header.css"
+import axios from '../localaxios'
+import userrequests from '../request';
 
 const Header = () => {
+const [movie,setMovie]=useState([])
+
+useEffect(() => {
+  async function fetchData() {
+    try {
+      const request = await axios.get(userrequests.fetchNetflixOriginals);
+      const movies = request.data.results;
+      const randomIndex = Math.floor(Math.random() * movies.length);
+      setMovie(movies[randomIndex]);
+      console.log(movies[randomIndex]);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  }
+
+  fetchData();
+  const interval = setInterval(fetchData, 3000); // Update every 9 seconds
+  return () => clearInterval(interval); // Clean up the interval on component unmount
+}, []);
+
   return (
-    <header>
+    <header style={{
+      backgroundSize: 'cover',
+      backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie?.backdrop_path})`,
+      backgroundPosition: 'center center',
+    }}>
+      
         <div className='header_inner_shadow '>
 
         </div>
         <div className='header_content'> 
             <div className='header_billbord'>
-                
-                <img alt="The Walking Dead" className="title-logo" src="https://occ-0-3215-3663.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABXpN1WnlyrB7DtPoEDtUidJqTrpkcdmNHlNchIRZs8tdBPTRYkf4_qM95uZyLwxccpYZsYthnkSrOGRVvYshlK7QuJoy2EwiwiWZOaj8k1Q-.webp?r=f1a" title="The Walking Dead"></img>
+              <h1 className='banner_title'>
+                {movie?.title || movie?.original_name ||movie?.name}
+                </h1>  
+                <img
+            className='title-logo'
+            // src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`}
+            alt={movie?.title || movie?.original_name || movie?.name}
+          />
+                {/* <img alt="The Walking Dead" className="title-logo" src="https://occ-0-3215-3663.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABXpN1WnlyrB7DtPoEDtUidJqTrpkcdmNHlNchIRZs8tdBPTRYkf4_qM95uZyLwxccpYZsYthnkSrOGRVvYshlK7QuJoy2EwiwiWZOaj8k1Q-.webp?r=f1a" title="The Walking Dead"></img> */}
             </div>
             <h4 className='header_desc'>
-            In the wake of a zombie apocalypse, survivors hold on to the hope of humanity by banding together to wage a fight for their own survival.  
+             {movie?.overview }
             </h4>
           <div className='header_buttons'>
           <button className='header_button play_button'>
