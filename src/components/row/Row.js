@@ -1,9 +1,9 @@
-// import "./Row.css"
+import "./Row.css"
 // import Cards from "../card/Cards"
 // import { useEffect , useState  } from "react"
 // import axios from "axios";
 
-// // const Row = (props) => {
+const Row = (props) => {
   
 
 // //    return (
@@ -19,4 +19,4 @@
 // //   )
 // // }
 
-// export default Row
+export default Row
