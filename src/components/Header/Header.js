@@ -13,7 +13,7 @@ useEffect(() => {
       const movies = request.data.results;
       const randomIndex = Math.floor(Math.random() * movies.length);
       setMovie(movies[randomIndex]);
-      console.log(movies[randomIndex]);
+      // console.log(movies[randomIndex]);
     } catch (error) {
       console.error('Error fetching data:', error);
     }

@@ -1,22 +1,38 @@
-// import "./Row.css"
-// import Cards from "../card/Cards"
-// import { useEffect , useState  } from "react"
-// import axios from "axios";
+import React from "react"
+import "./Row.css"
 
-// // const Row = (props) => {
-  
+function Row({title,isLargerRow}){
+  const ScrollLeft = document.querySelector('.row_posters');
 
-// //    return (
-// //     <div className="row_wrapper">
-// //         <h3 className="row_title">{props.title}</h3>
-// //       <div className="row_card">
-// //       {movies.map((el)=>{
-// //         return <Cards title={el.title} poster={el.backdrop_path }/>
-// //      })}
-// //         </div>  
-     
-// //     </div>
-// //   )
-// // }
+  ScrollLeft.addEventListener('mousemove', (event) => {
+  ScrollLeft += event.movementX;
+});
+  return(
+    <div className="row">
+      <h2>{title}</h2>
+        <div className="row_posters">
+         <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/qnqGbB22YJ7dSs4o6M7exTpNxPz.jpg"
+         className={`rowpost ${isLargerRow && "largeImg"}`}/>
+         <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/qnqGbB22YJ7dSs4o6M7exTpNxPz.jpg"
+         className={`rowpost ${isLargerRow && "largeImg"}`}/>
+         <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/qnqGbB22YJ7dSs4o6M7exTpNxPz.jpg"
+         className={`rowpost ${isLargerRow && "largeImg"}`}/>
+         <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/qnqGbB22YJ7dSs4o6M7exTpNxPz.jpg"
+         className={`rowpost ${isLargerRow && "largeImg"}`}/>
+         <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/qnqGbB22YJ7dSs4o6M7exTpNxPz.jpg"
+         className={`rowpost ${isLargerRow && "largeImg"}`}/>
+         <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/qnqGbB22YJ7dSs4o6M7exTpNxPz.jpg"
+         className={`rowpost ${isLargerRow && "largeImg"}`}/>
+         <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/qnqGbB22YJ7dSs4o6M7exTpNxPz.jpg"
+         className={`rowpost ${isLargerRow && "largeImg"}`}/>
+         <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/qnqGbB22YJ7dSs4o6M7exTpNxPz.jpg"
+         className={`rowpost ${isLargerRow && "largeImg"}`}/>
+         <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/qnqGbB22YJ7dSs4o6M7exTpNxPz.jpg"
+         className={`rowpost ${isLargerRow && "largeImg"}`}/>
 
-// export default Row
+          </div>
+      </div>
+  )
+}
+
+export default Row
