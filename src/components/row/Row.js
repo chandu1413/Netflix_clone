@@ -1,22 +1,36 @@
 import "./Row.css"
 // import Cards from "../card/Cards"
-// import { useEffect , useState  } from "react"
+import { useEffect , useState  } from "react"
 // import axios from "axios";
 
-const Row = (props) => {
-  
+function Row  ({title,isLargerRow}) {
+const ScroleLeft=document.querySelector('.row_posters')
 
-// //    return (
-// //     <div className="row_wrapper">
-// //         <h3 className="row_title">{props.title}</h3>
-// //       <div className="row_card">
-// //       {movies.map((el)=>{
-// //         return <Cards title={el.title} poster={el.backdrop_path }/>
-// //      })}
-// //         </div>  
-     
-// //     </div>
-// //   )
-// // }
+ScroleLeft.addEventListener('mousemove',(e)=>{
+  ScroleLeft.scrollLeft += e.movementX;});
+
+   return (
+    <div className="row">
+      <h2>{title}</h2>
+
+      <div className="row_posters">
+          <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/xSDdRAjxKAGi8fUBLOqSrBhJmF0.jpg"
+          className={`rowpost ${isLargerRow && "largeImg"}`}/>
+          <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/xSDdRAjxKAGi8fUBLOqSrBhJmF0.jpg"
+          className={`rowpost ${isLargerRow && "largeImg"}`}/>
+          <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/xSDdRAjxKAGi8fUBLOqSrBhJmF0.jpg"
+          className={`rowpost ${isLargerRow && "largeImg"}`}/>
+          <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/xSDdRAjxKAGi8fUBLOqSrBhJmF0.jpg"
+          className={`rowpost ${isLargerRow && "largeImg"}`}/>
+          <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/xSDdRAjxKAGi8fUBLOqSrBhJmF0.jpg"
+          className={`rowpost ${isLargerRow && "largeImg"}`}/>
+          <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/xSDdRAjxKAGi8fUBLOqSrBhJmF0.jpg"
+          className={`rowpost ${isLargerRow && "largeImg"}`}/>
+          <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/xSDdRAjxKAGi8fUBLOqSrBhJmF0.jpg"
+          className={`rowpost ${isLargerRow && "largeImg"}`}/>
+      </div>
+    </div>
+  )
+}
 
 export default Row
