@@ -2,11 +2,11 @@ import React from "react"
 import "./Row.css"
 
 function Row({title,isLargerRow}){
-  const ScrollLeft = document.querySelector('.row_posters');
+//   const ScrollLeft = document.querySelector('.row_posters');
 
-  ScrollLeft.addEventListener('mousemove', (event) => {
-  ScrollLeft += event.movementX;
-});
+//   ScrollLeft.addEventListener('mousemove', (event) => {
+//   ScrollLeft += event.movementX;
+// });
   return(
     <div className="row">
       <h2>{title}</h2>
