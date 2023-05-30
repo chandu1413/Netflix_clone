@@ -21,6 +21,8 @@ const App = () => {
     <Row title="Action Movies" fetchURL={userrequests.fetchActionMOvies}/>
     <Row title="Comedy Movies" fetchURL={userrequests.fetchComedyMovies}/>
     <Row title="Horror Movies" fetchURL={userrequests.fetchHorrorMovies}/>
+    <Row title="Romantic Movies" fetchURL={userrequests.fetchRomanceMovies}/>
+    <Row title="Documentaries" fetchURL={userrequests.fetchDocumentaries}/>
     </>
   )
 }
