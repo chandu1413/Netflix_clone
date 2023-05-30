@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import "./Header.css"
-import axios from '../localaxios'
+import React, { useEffect, useState } from 'react';
+import "./Header.css";
+import axios from '../localaxios';
 import userrequests from '../request';
 
 const Header = () => {
@@ -13,7 +13,6 @@ useEffect(() => {
       const movies = request.data.results;
       const randomIndex = Math.floor(Math.random() * movies.length);
       setMovie(movies[randomIndex]);
-      // console.log(movies[randomIndex]);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -25,7 +24,7 @@ useEffect(() => {
 }, []);
 
   return (
-    <header style={{
+    <header className='header' style={{
       backgroundSize: 'cover',
       backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie?.backdrop_path})`,
       backgroundPosition: 'center center',
